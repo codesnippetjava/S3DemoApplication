@@ -31,7 +31,8 @@ public class S3Service {
     }
 
     public byte[] downloadFile(String key) {
-        ResponseBytes<GetObjectResponse> objectAsBytes = s3Client.getObjectAsBytes(GetObjectRequest.builder()
+        ResponseBytes<GetObjectResponse> objectAsBytes =
+                s3Client.getObjectAsBytes(GetObjectRequest.builder()
                 .bucket(bucketName)
                 .key(key)
                 .build());
